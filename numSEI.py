@@ -1,4 +1,4 @@
-
+import random
 
 
 
@@ -25,7 +25,16 @@ else:
     print("isso acaba aqui intão.")
 
 HPdraco = 200
+seuHP = 100
 
 while True:
-    print(HPdraco)
     print("")
+    Xcolha = int(input("(1)ATK (2)CURA (3)DEFESA"))
+    if HPdraco >= 0:
+        print("")
+        print(HPdraco)
+        print("")
+    if HPdraco >= 0:
+        print("")
+        print(HPdraco)
+        print("")
