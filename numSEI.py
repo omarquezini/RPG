@@ -24,14 +24,18 @@ if escolha == 1:
 else:
     print("isso acaba aqui intão.")
 
-numeroA = random.randint(0, 3)
 HPdraco = 200
 seuHP = 100
 
 while True:
+    numeroA = random.randint(0, 3)
     print("")
-    Xcolha = int(input("(1)ATK (2)CURA (3)DEFESA"))
+    Xcolha = int(input("(1)ATK (2)CURA (3)DEFESA: "))
+    print("")
 
     if Xcolha == 1 and numeroA == 1:
-        print("OK, isso deu serto (10) de ataque foram aplicados ao inimigo.")
-        
+        print("OK, (10) de dano foram causados.")
+        HPdraco -10
+    elif Xcolha == 1 and numeroA == 2:
+        print("OK, você não teve sorte")
+    print(HPdraco)
