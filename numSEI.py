@@ -28,7 +28,7 @@ HPdraco = 200
 seuHP = 100
 
 while True:
-    numeroA = random.randint(0, 3)
+    numeroA = random.randint(1, 2)
     print("")
     Xcolha = int(input("(1)ATK (2)CURA (3)DEFESA: "))
     print("")
