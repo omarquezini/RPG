@@ -19,11 +19,14 @@ print("$$$   5.000.000.000   $$$")
 
 escolha = int(input("você aseita a missão? / (1) SIM (2) NÃO :"))
 
-if escolha == 1:
-    print(" blz intão.")
-else:
-    print("infelizmente você não tem escolha.")
 
+if escolha == 1:
+        print("")
+        print("Blz, então.")
+elif escolha == 2:
+        print("")
+        print("Você infelizmente não tem escolha.")
+      
 HP_draco = 200
 HP_seu = 100
 
@@ -54,6 +57,7 @@ while True:
 #3 DEFESA
         if Xcolha == 3 and numeroA == 1:
                 print("OK, ... você se defendeu.")
+                print("Isso foi ineficas.")
                 HP_seu == HP_seu
         elif Xcolha == 3 and numeroA == 2:
             print("")
@@ -73,7 +77,7 @@ while True:
                 print("AH. o dragão te arranhou")
                 print("ele te causou (5) de dano")
                 HP_seu -=5
-        elif XcolhaDR == 2 and numeroB == 2 or numeroB == 3 or Xcolha == 3 :
+        elif XcolhaDR == 2 and numeroB == 2 or numeroB == 3 :
             print("")
             print("ele não teve sorte")
 #3 dragão CURA
@@ -81,14 +85,14 @@ while True:
                 print("")
                 print("AH. o dragão se curou")
                 HP_draco +=5
-        elif XcolhaDR == 3 and numeroB == 2 or numeroB == 3 or Xcolha == 3 :
+        elif XcolhaDR == 3 and numeroB == 2 or numeroB == 3 :
             print("")
             print("ele não teve sorte")
 
         print("")
         print(f"DRAGÃO = {HP_draco}")
         print(f"DRAGÃO = {HP_seu}")
-        if HP_seu <= 0:
+        if HP_seu <= 0 :
             print("\nVocê perdeu! Fim de jogo.")
             break
         elif HP_draco <= 0:
