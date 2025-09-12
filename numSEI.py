@@ -1,13 +1,14 @@
 import random
+from colorama import init, Fore, Back, Style
 
+init()
 
-
-print("[]========================[]")
-print("[]                        []")
-print("[]     *O_MARQUEZINI*     []")
-print("[]      a aula final.     []")
-print("[]                        []")
-print("[]========================[]")
+print(Fore.BLACK +"[]========================[]")
+print(Fore.BLACK +"[]                        []")
+print(Fore.BLACK +"[]     *O_MARQUEZINI*     []")
+print(Fore.BLACK +"[]      a aula final.     []")
+print(Fore.BLACK +"[]                        []")
+print(Fore.BLACK +"[]========================[]")
 
 print("")
 print("Um monstro terrivel a anos")
@@ -17,7 +18,7 @@ print("")
 print("missão: matar a criatura!")
 print("$$$   5.000.000.000   $$$")
 
-escolha = int(input("você aseita a missão? / (1) SIM (2) NÃO :"))
+escolha = int(input(Fore.RED +"você aseita a missão? / (1) SIM (2) NÃO :"))
 
 
 if escolha == 1:
@@ -25,7 +26,8 @@ if escolha == 1:
         print("Blz, então.")
 elif escolha == 2:
         print("")
-        print("Você infelizmente não tem escolha.")
+        print(Fore.RED+"Blz.")
+        exit()
       
 HP_draco = 200
 HP_seu = 100
@@ -37,61 +39,53 @@ while True:
         XcolhaDR = random.randint(1,3)
 
         print("")
-        Xcolha = int(input("(1)ATAQUE (2)CURA (3)DEFESA: "))
+        Xcolha = int(input(Fore.GREEN + "(1)ATAQUE (2)CURA : "))
         print("")
 
 #1 ATAQUE
         if Xcolha == 1 and numeroA == 1:
-                print("OK, (10) de dano foram causados.")
+                print(Fore.GREEN +"OK, (10) de dano foram causados.")
                 HP_draco -=10
         elif Xcolha == 1 and numeroA == 2:
             print("")
-            print("você não tem sorte")
+            print(Fore.BLACK +"você não tem sorte")
 #2 CURA
         if Xcolha == 2 and numeroA == 1:
-                print("OK, (10) de cura foram caudos.")
+                print(Fore.GREEN +"OK, (10) de cura foram caudos.")
                 HP_seu +=10
         elif Xcolha == 2 and numeroA == 2:
             print("")
-            print("você não tem sorte")
-#3 DEFESA
-        if Xcolha == 3 and numeroA == 1:
-                print("OK, ... você se defendeu.")
-                print("Isso foi ineficas.")
-                HP_seu == HP_seu
-        elif Xcolha == 3 and numeroA == 2:
-            print("")
-            print("você não tem sorte")
+            print(Fore.BLACK +"você não tem sorte")
 #1 dragão ATAQUE
         if XcolhaDR == 1 and numeroB == 1:
                 print("")
-                print("AH. o dragão te atacou")
+                print(Fore.RED + "AH. o dragão te atacou")
                 print("ele te causou (20) de dano")
                 HP_seu -=20
-        elif XcolhaDR == 1 and numeroB == 2 or numeroB == 3 or Xcolha == 3 :
+        elif XcolhaDR == 1 and numeroB == 2 or numeroB == 3:
             print("")
-            print("ele não teve sorte")
-#2 dragão SCRATCH
+            print(Fore.BLACK +"ele não teve sorte")
+#2 dragão "SCRATCH"
         if XcolhaDR == 2 and numeroB == 1:
                 print("")
-                print("AH. o dragão te arranhou")
+                print(Fore.RED +"AH. o dragão te arranhou")
                 print("ele te causou (5) de dano")
                 HP_seu -=5
         elif XcolhaDR == 2 and numeroB == 2 or numeroB == 3 :
             print("")
-            print("ele não teve sorte")
+            print(Fore.BLACK +"ele não teve sorte")
 #3 dragão CURA
         if XcolhaDR == 3 and numeroB == 1:
                 print("")
-                print("AH. o dragão se curou")
+                print(Fore.RED + "AH. o dragão se curou")
                 HP_draco +=5
         elif XcolhaDR == 3 and numeroB == 2 or numeroB == 3 :
             print("")
-            print("ele não teve sorte")
+            print(Fore.BLACK +"ele não teve sorte")
 
         print("")
-        print(f"DRAGÃO = {HP_draco}")
-        print(f"DRAGÃO = {HP_seu}")
+        print(Fore.RED + f"DRAGÃO = {HP_draco}")
+        print(Fore.BLUE + f"Você = {HP_seu}")
         if HP_seu <= 0 :
             print("\nVocê perdeu! Fim de jogo.")
             break
