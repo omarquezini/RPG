@@ -35,6 +35,7 @@ HP_seu = 100
 while True:
         numeroA = random.randint(1, 2)
         numeroB = random.randint(1,3)
+        critcal = random.randint(1,5)
 
         XcolhaDR = random.randint(1,3)
 
@@ -46,6 +47,9 @@ while True:
         if Xcolha == 1 and numeroA == 1:
                 print(Fore.GREEN +"OK, (10) de dano foram causados.")
                 HP_draco -=10
+        elif critcal == 5 and Xcolha == 1 and numeroA == 1:
+                print(Fore.GREEN +"CRITICO! (20) de dano foram causados.")
+                HP_draco -=20
         elif Xcolha == 1 and numeroA == 2:
             print("")
             print(Fore.BLACK +"você não tem sorte")
