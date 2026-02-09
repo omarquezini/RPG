@@ -12,7 +12,7 @@ print(Fore.BLACK +"[]========================[]")
 
 print("")
 print("Um monstro terrivel a anos")
-print("atrai pesouas para uma")
+print("atrai pessoas para uma")
 print("caverna misteriosa.")
 print("")
 print("missão: matar a criatura!")
@@ -31,6 +31,7 @@ elif escolha == 2:
       
 HP_draco = 200
 HP_seu = 100
+mana = 5
 
 while True:
         numeroA = random.randint(1, 2)
@@ -39,8 +40,11 @@ while True:
 
         XcolhaDR = random.randint(1,3)
 
+        
+
         print("")
-        Xcolha = int(input(Fore.GREEN + "(1)ATAQUE (2)CURA : "))
+        Xcolha = int(input(Fore.GREEN + " (1)ATAQUE /// (2)CURA -5 MANA /// (3) ESPERAR +10 MANA: "))
+        print(f"MANA :{mana}")
         print("")
 
 #1 ATAQUE
@@ -48,18 +52,28 @@ while True:
                 print(Fore.GREEN +"OK, (10) de dano foram causados.")
                 HP_draco -=10
         elif critcal == 5 and Xcolha == 1 and numeroA == 1:
-                print(Fore.GREEN +"CRITICO! (20) de dano foram causados.")
+                print(Fore.RED +"CRITICO! (20) de dano foram causados.")
                 HP_draco -=20
         elif Xcolha == 1 and numeroA == 2:
             print("")
             print(Fore.BLACK +"você não tem sorte")
+
 #2 CURA
-        if Xcolha == 2 and numeroA == 1:
-                print(Fore.GREEN +"OK, (10) de cura foram caudos.")
+        if Xcolha == 2 and numeroA == 1 and mana > 0:
+                print(Fore.GREEN +"OK, (10) de cura foram causados.")
                 HP_seu +=10
+                mana -= 5
+
         elif Xcolha == 2 and numeroA == 2:
             print("")
             print(Fore.BLACK +"você não tem sorte")
+
+#3 ESPERAR
+        if Xcolha == 3 and numeroA == 1 :
+                print(Fore.BLUE +"OK...")
+                mana += 10
+
+        
 #1 dragão ATAQUE
         if XcolhaDR == 1 and numeroB == 1:
                 print("")
@@ -69,6 +83,7 @@ while True:
         elif XcolhaDR == 1 and numeroB == 2 or numeroB == 3:
             print("")
             print(Fore.BLACK +"ele não teve sorte")
+
 #2 dragão "SCRATCH"
         if XcolhaDR == 2 and numeroB == 1:
                 print("")
@@ -78,6 +93,7 @@ while True:
         elif XcolhaDR == 2 and numeroB == 2 or numeroB == 3 :
             print("")
             print(Fore.BLACK +"ele não teve sorte")
+
 #3 dragão CURA
         if XcolhaDR == 3 and numeroB == 1:
                 print("")
