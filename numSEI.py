@@ -47,7 +47,6 @@ while True:
         Xcolha = int(input(Fore.GREEN + " (1)ATAQUE /// (2)CURA -5 MANA /// (3) ESPERAR +10 MANA: "))
         print("")
 
-       
 
 #1 ATAQUE
         if Xcolha == 1 and numeroA == 1:
@@ -105,6 +104,7 @@ while True:
             print("")
             print(Fore.BLACK +"ele não teve sorte")
 
+
         print("")
         print(Fore.RED + f"DRAGÃO = {HP_draco}")
         if HP_seu >= 100:
@@ -116,13 +116,18 @@ while True:
         elif HP_seu < 50:
               print(Fore.RED + f"Você = {HP_seu}")
 
+#NUM SEI...
+
         if Xcolha > 3:
-              print (Fore.LIGHTRED_EX + "Você morreu porque você é" + Fore.LIGHTMAGENTA_EX + "BURRO!")
-              HP_seu -= 999
+              print (Fore.LIGHTRED_EX + "Você morreu porque você é " + Fore.LIGHTMAGENTA_EX + "BURRO!")
+              HP_seu == 100  
+              HP_seu -= 1000
 
         elif Xcolha < 1:
-              print (Fore.LIGHTRED_EX + "Você morreu porque você é" + Fore.LIGHTMAGENTA_EX + "INDIOTA!")
-              HP_seu -= 999
+              print (Fore.LIGHTRED_EX + "Você morreu porque você é " + Fore.LIGHTMAGENTA_EX + "INDIOTA!")
+              HP_seu == 100
+              HP_seu -= 1000
+
 
 
 
